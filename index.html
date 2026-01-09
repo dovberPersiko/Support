@@ -266,6 +266,17 @@
             color: var(--white);
         }
 
+        .btn-email {
+            background: linear-gradient(135deg, #EA4335 0%, #FBBC04 100%);
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(234, 67, 53, 0.4);
+        }
+
+        .btn-email:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(234, 67, 53, 0.5);
+        }
+
         /* Footer */
         .footer {
             background: var(--white);
@@ -358,6 +369,13 @@
                         <div class="feature-desc" data-i18n="feature3Desc">מתחשב בשבתות, חגים וצומות</div>
                     </div>
                 </div>
+                <div class="feature">
+                    <div class="feature-icon">🕯️</div>
+                    <div class="feature-text">
+                        <div class="feature-title" data-i18n="feature4Title">נוסח הארי ז״ל</div>
+                        <div class="feature-desc" data-i18n="feature4Desc">החישובים לפי נוסח הארי ז״ל (חב״ד)</div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -365,10 +383,15 @@
         <div class="card">
             <h2 class="section-title" data-i18n="supportTitle">תמיכה ושאלות</h2>
             <p class="description" data-i18n="supportText">
-                יש לך שאלה או צריכים עזרה? אנחנו כאן בשבילך! צרו איתנו קשר דרך פייסבוק ונשמח לעזור.
+                יש לך שאלה או צריכים עזרה? אנחנו כאן בשבילך! צרו איתנו קשר דרך אחד מהאמצעים הבאים ונשמח לעזור.
             </p>
 
             <div class="buttons">
+                <a href="mailto:dober.p@gmail.com?subject=תמיכה - חיוב&body=שלום,%0D%0A%0D%0A" class="btn btn-email">
+                    <span>✉️</span>
+                    <span data-i18n="contactEmail">צור קשר במייל</span>
+                    <span style="font-size: 14px; opacity: 0.9;">(dober.p@gmail.com)</span>
+                </a>
                 <a href="https://www.facebook.com/dober.persiko" class="btn btn-primary" target="_blank">
                     <span>📘</span>
                     <span data-i18n="contactFacebook">צור קשר בפייסבוק</span>
@@ -397,8 +420,11 @@
                 feature2Desc: "חישוב אוטומטי לכל תפילה",
                 feature3Title: "לפי ההלכה",
                 feature3Desc: "מתחשב בשבתות, חגים וצומות",
+                feature4Title: "נוסח הארי ז״ל",
+                feature4Desc: "החישובים לפי נוסח הארי ז״ל (חב״ד)",
                 supportTitle: "תמיכה ושאלות",
-                supportText: "יש לך שאלה או צריכים עזרה? אנחנו כאן בשבילך! צרו איתנו קשר דרך פייסבוק ונשמח לעזור.",
+                supportText: "יש לך שאלה או צריכים עזרה? אנחנו כאן בשבילך! צרו איתנו קשר דרך אחד מהאמצעים הבאים ונשמח לעזור.",
+                contactEmail: "צור קשר במייל",
                 contactFacebook: "צור קשר בפייסבוק",
                 footerText: "© 2025 חיוב - Chiyuv. כל הזכויות שמורות.",
                 footerDesc: "אפליקציה לעקיבה אחר חיוב אמירת קדיש על פטירת הורה"
@@ -414,8 +440,11 @@
                 feature2Desc: "Automatic calculation for each prayer",
                 feature3Title: "Halachic Guidelines",
                 feature3Desc: "Accounts for Shabbat, holidays, and fast days",
+                feature4Title: "Ari Zal Nusach",
+                feature4Desc: "Calculations follow the Ari Zal Nusach (Chabad)",
                 supportTitle: "Support & Questions",
-                supportText: "Have a question or need help? We're here for you! Contact us on Facebook and we'll be happy to help.",
+                supportText: "Have a question or need help? We're here for you! Contact us through one of the following methods and we'll be happy to help.",
+                contactEmail: "Contact via Email",
                 contactFacebook: "Contact on Facebook",
                 footerText: "© 2025 Chiyuv. All rights reserved.",
                 footerDesc: "App for tracking Kaddish obligation for a parent's passing"
