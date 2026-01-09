@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מדיניות פרטיות - Chiyuv | Privacy Policy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #007AFF;
+            --accent-purple: #5856D6;
+            --gradient: linear-gradient(135deg, #007AFF 0%, #5856D6 100%);
+            --text-primary: #1D1D1F;
+            --text-secondary: #86868B;
+            --bg-light: #F5F5F7;
+            --white: #FFFFFF;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            --border-color: #E5E5E7;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            background: var(--bg-light);
+            color: var(--text-primary);
+            line-height: 1.8;
+            min-height: 100vh;
+            transition: all 0.3s ease;
+        }
+
+        body[dir="ltr"] {
+            direction: ltr;
+            text-align: left;
+        }
+
+        body[dir="rtl"] {
+            direction: rtl;
+            text-align: right;
+        }
+
+        /* Language Selector */
+        .lang-selector {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+            background: var(--white);
+            padding: 8px;
+            border-radius: 25px;
+            box-shadow: var(--shadow);
+        }
+
+        body[dir="rtl"] .lang-selector {
+            left: auto;
+            right: 20px;
+        }
+
+        .lang-btn {
+            padding: 8px 16px;
+            border: 2px solid transparent;
+            background: transparent;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+            color: var(--text-primary);
+        }
+
+        .lang-btn.active {
+            background: var(--gradient);
+            color: var(--white);
+            border-color: transparent;
+        }
+
+        .lang-btn:hover {
+            background: var(--bg-light);
+        }
+
+        .lang-btn.active:hover {
+            background: var(--gradient);
+        }
+
+        /* Header */
+        .header {
+            background: var(--gradient);
+            color: var(--white);
+            padding: 80px 20px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 15s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 50px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .last-updated {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section:last-child {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            padding-top: 20px;
+            border-top: 2px solid var(--border-color);
+        }
+
+        .section:first-child h2 {
+            border-top: none;
+            padding-top: 0;
+        }
+
+        p {
+            font-size: 16px;
+            color: var(--text-primary);
+            margin-bottom: 15px;
+        }
+
+        ul, ol {
+            margin: 15px 0 15px 30px;
+            padding-right: 20px;
+        }
+
+        body[dir="ltr"] ul,
+        body[dir="ltr"] ol {
+            margin-left: 30px;
+            margin-right: 0;
+            padding-left: 20px;
+            padding-right: 0;
+        }
+
+        li {
+            font-size: 16px;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+            line-height: 1.8;
+        }
+
+        .highlight-box {
+            background: var(--bg-light);
+            border-right: 4px solid var(--primary-blue);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        body[dir="ltr"] .highlight-box {
+            border-right: none;
+            border-left: 4px solid var(--primary-blue);
+        }
+
+        .contact-info {
+            background: var(--bg-light);
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 30px;
+        }
+
+        .contact-info strong {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .contact-info a {
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Back to App Link */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--primary-blue);
+            text-decoration: none;
+            margin-bottom: 30px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .back-link:hover {
+            gap: 15px;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--white);
+            padding: 30px 20px;
+            text-align: center;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--border-color);
+            margin-top: 40px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            .card {
+                padding: 30px 20px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            .lang-selector {
+                top: 10px;
+                right: 10px;
+                left: auto;
+            }
+
+            body[dir="rtl"] .lang-selector {
+                left: 10px;
+                right: auto;
+            }
+        }
+    </style>
+</head>
+<body dir="rtl">
+    <!-- Language Selector -->
+    <div class="lang-selector">
+        <button class="lang-btn active" onclick="setLanguage('he')">עברית</button>
+        <button class="lang-btn" onclick="setLanguage('en')">English</button>
+    </div>
+
+    <!-- Header -->
+    <div class="header">
+        <div class="header-content">
+            <h1 data-i18n="title">מדיניות פרטיות</h1>
+            <p class="subtitle" data-i18n="subtitle">Privacy Policy</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="card">
+            <p class="last-updated" data-i18n="lastUpdated">עודכן לאחרונה: 26 בדצמבר 2025 | Last Updated: December 26, 2025</p>
+
+            <!-- Introduction -->
+            <div class="section">
+                <h2 data-i18n="introTitle">1. מבוא</h2>
+                <p data-i18n="introText1">
+                    האפליקציה "חיוב" (Chiyuv) מכבדת את הפרטיות שלך ומחויבת להגנה על המידע האישי שלך. 
+                    מדיניות הפרטיות הזו מסבירה איזה מידע נאסף, כיצד הוא משמש ונשמר, ומה הזכויות שלך בנוגע למידע זה.
+                </p>
+                <p data-i18n="introText2">
+                    על ידי שימוש באפליקציה, אתה מסכים לאיסוף ושימוש במידע בהתאם למדיניות זו.
+                </p>
+            </div>
+
+            <!-- Information We Collect -->
+            <div class="section">
+                <h2 data-i18n="collectTitle">2. איזה מידע נאסף</h2>
+                <p data-i18n="collectText">
+                    האפליקציה "חיוב" אוספת ומאחסנת את המידע הבא, שנשמר מקומית במכשיר שלך בלבד:
+                </p>
+                <ul>
+                    <li data-i18n="collectItem1"><strong>תאריך פטירה:</strong> התאריך העברי של פטירת ההורה</li>
+                    <li data-i18n="collectItem2"><strong>קשרי משפחה:</strong> האם זה אב או אם</li>
+                    <li data-i18n="collectItem3"><strong>מיקום:</strong> בחירה בין ארץ ישראל או חו"ל</li>
+                    <li data-i18n="collectItem4"><strong>העדפת חזן:</strong> האם עומדים חזן או רק אומרים קדיש</li>
+                </ul>
+                <div class="highlight-box">
+                    <p data-i18n="collectNote">
+                        <strong>חשוב:</strong> כל המידע נשמר מקומית במכשיר שלך בלבד ולא נשלח לשרתים חיצוניים או לספקי שירותים שלישיים.
+                    </p>
+                </div>
+            </div>
+
+            <!-- How We Use Information -->
+            <div class="section">
+                <h2 data-i18n="useTitle">3. כיצד אנו משתמשים במידע</h2>
+                <p data-i18n="useText">
+                    המידע שנאסף משמש אך ורק למטרות הבאות:
+                </p>
+                <ul>
+                    <li data-i18n="useItem1">חישוב תקופת החיוב (11 חודשים)</li>
+                    <li data-i18n="useItem2">חישוב מספר הקדישים הנדרש לכל יום</li>
+                    <li data-i18n="useItem3">הצגת מידע על סוגי ימים (שבת, חגים, צומות וכו')</li>
+                    <li data-i18n="useItem4">מתן סטטיסטיקות והתקדמות בתקופת החיוב</li>
+                </ul>
+                <p data-i18n="useText2">
+                    האפליקציה לא משתפת את המידע שלך עם צדדים שלישיים ואינה משתמשת בו למטרות פרסום או שיווק.
+                </p>
+            </div>
+
+            <!-- Data Storage -->
+            <div class="section">
+                <h2 data-i18n="storageTitle">4. אחסון מידע</h2>
+                <p data-i18n="storageText1">
+                    כל המידע נשמר מקומית במכשיר שלך באמצעות UserDefaults של iOS. המידע נשאר במכשיר שלך ולא נשמר בענן.
+                </p>
+                <p data-i18n="storageText2">
+                    אם תמחק את האפליקציה מהמכשיר, כל המידע שנשמר יימחק גם הוא. אין לנו אפשרות לשחזר את המידע לאחר המחיקה.
+                </p>
+                <p data-i18n="storageText3">
+                    אנו ממליצים לך לשמור גיבוי של המידע החשוב באופן עצמאי.
+                </p>
+            </div>
+
+            <!-- Data Security -->
+            <div class="section">
+                <h2 data-i18n="securityTitle">5. אבטחת מידע</h2>
+                <p data-i18n="securityText1">
+                    אנו משתמשים בתכונות האבטחה המובנות של מערכת iOS לאחסון המידע. המידע נשמר באופן מקומי בלבד ולא עובר דרך רשת.
+                </p>
+                <p data-i18n="securityText2">
+                    עם זאת, שים לב שאם המכשיר שלך לא מוגן (אין סיסמה או Face ID), כל מי שיגש למכשיר יוכל לראות את המידע שנשמר באפליקציה.
+                </p>
+            </div>
+
+            <!-- Children's Privacy -->
+            <div class="section">
+                <h2 data-i18n="childrenTitle">6. פרטיות ילדים</h2>
+                <p data-i18n="childrenText">
+                    האפליקציה אינה מכוונת לילדים מתחת לגיל 13 ואיננו אוספים במודע מידע מילדים מתחת לגיל זה.
+                    אם אתה הורה או אפוטרופוס וגילית שילדך סיפק לנו מידע אישי, אנא צור איתנו קשר כדי שנוכל למחוק את המידע.
+                </p>
+            </div>
+
+            <!-- Third-Party Services -->
+            <div class="section">
+                <h2 data-i18n="thirdPartyTitle">7. שירותים של צדדים שלישיים</h2>
+                <p data-i18n="thirdPartyText">
+                    האפליקציה "חיוב" אינה משתמשת בשירותים של צדדים שלישיים, טרקרים, מפרסומות או כלי אנליטיקה. 
+                    כל המידע נשאר במכשיר שלך בלבד.
+                </p>
+            </div>
+
+            <!-- Changes to Privacy Policy -->
+            <div class="section">
+                <h2 data-i18n="changesTitle">8. שינויים במדיניות הפרטיות</h2>
+                <p data-i18n="changesText1">
+                    אנו עשויים לעדכן את מדיניות הפרטיות מעת לעת. כל שינוי משמעותי יפורסם בעמוד זה עם תאריך העדכון.
+                </p>
+                <p data-i18n="changesText2">
+                    מומלץ לבדוק את מדיניות הפרטיות באופן תקופתי כדי להישאר מעודכן על האופן שבו אנו מגנים על המידע שלך.
+                </p>
+            </div>
+
+            <!-- Contact -->
+            <div class="section">
+                <h2 data-i18n="contactTitle">9. צור קשר</h2>
+                <p data-i18n="contactText">
+                    אם יש לך שאלות או חששות בנוגע למדיניות הפרטיות שלנו או לניהול המידע האישי שלך, אנא צור איתנו קשר:
+                </p>
+                <div class="contact-info">
+                    <strong data-i18n="contactLabel">יצירת קשר:</strong>
+                    <p>
+                        <a href="mailto:your-email@example.com">your-email@example.com</a>
+                    </p>
+                    <p style="margin-top: 15px;">
+                        <a href="https://facebook.com/your-page" target="_blank" data-i18n="contactFacebook">צור קשר דרך פייסבוק</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Consent -->
+            <div class="section">
+                <h2 data-i18n="consentTitle">10. הסכמה</h2>
+                <p data-i18n="consentText">
+                    על ידי שימוש באפליקציה "חיוב", אתה מסכים למדיניות הפרטיות זו. אם אינך מסכים למדיניות זו, אנא אל תשתמש באפליקציה.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p data-i18n="footerText">© 2025 חיוב - Chiyuv. כל הזכויות שמורות.</p>
+    </div>
+
+    <script>
+        // Translations
+        const translations = {
+            he: {
+                title: "מדיניות פרטיות",
+                subtitle: "Privacy Policy",
+                lastUpdated: "עודכן לאחרונה: 26 בדצמבר 2025 | Last Updated: December 26, 2025",
+                introTitle: "1. מבוא",
+                introText1: "האפליקציה \"חיוב\" (Chiyuv) מכבדת את הפרטיות שלך ומחויבת להגנה על המידע האישי שלך. מדיניות הפרטיות הזו מסבירה איזה מידע נאסף, כיצד הוא משמש ונשמר, ומה הזכויות שלך בנוגע למידע זה.",
+                introText2: "על ידי שימוש באפליקציה, אתה מסכים לאיסוף ושימוש במידע בהתאם למדיניות זו.",
+                collectTitle: "2. איזה מידע נאסף",
+                collectText: "האפליקציה \"חיוב\" אוספת ומאחסנת את המידע הבא, שנשמר מקומית במכשיר שלך בלבד:",
+                collectItem1: "<strong>תאריך פטירה:</strong> התאריך העברי של פטירת ההורה",
+                collectItem2: "<strong>קשרי משפחה:</strong> האם זה אב או אם",
+                collectItem3: "<strong>מיקום:</strong> בחירה בין ארץ ישראל או חו\"ל",
+                collectItem4: "<strong>העדפת חזן:</strong> האם עומדים חזן או רק אומרים קדיש",
+                collectNote: "<strong>חשוב:</strong> כל המידע נשמר מקומית במכשיר שלך בלבד ולא נשלח לשרתים חיצוניים או לספקי שירותים שלישיים.",
+                useTitle: "3. כיצד אנו משתמשים במידע",
+                useText: "המידע שנאסף משמש אך ורק למטרות הבאות:",
+                useItem1: "חישוב תקופת החיוב (11 חודשים)",
+                useItem2: "חישוב מספר הקדישים הנדרש לכל יום",
+                useItem3: "הצגת מידע על סוגי ימים (שבת, חגים, צומות וכו')",
+                useItem4: "מתן סטטיסטיקות והתקדמות בתקופת החיוב",
+                useText2: "האפליקציה לא משתפת את המידע שלך עם צדדים שלישיים ואינה משתמשת בו למטרות פרסום או שיווק.",
+                storageTitle: "4. אחסון מידע",
+                storageText1: "כל המידע נשמר מקומית במכשיר שלך באמצעות UserDefaults של iOS. המידע נשאר במכשיר שלך ולא נשמר בענן.",
+                storageText2: "אם תמחק את האפליקציה מהמכשיר, כל המידע שנשמר יימחק גם הוא. אין לנו אפשרות לשחזר את המידע לאחר המחיקה.",
+                storageText3: "אנו ממליצים לך לשמור גיבוי של המידע החשוב באופן עצמאי.",
+                securityTitle: "5. אבטחת מידע",
+                securityText1: "אנו משתמשים בתכונות האבטחה המובנות של מערכת iOS לאחסון המידע. המידע נשמר באופן מקומי בלבד ולא עובר דרך רשת.",
+                securityText2: "עם זאת, שים לב שאם המכשיר שלך לא מוגן (אין סיסמה או Face ID), כל מי שיגש למכשיר יוכל לראות את המידע שנשמר באפליקציה.",
+                childrenTitle: "6. פרטיות ילדים",
+                childrenText: "האפליקציה אינה מכוונת לילדים מתחת לגיל 13 ואיננו אוספים במודע מידע מילדים מתחת לגיל זה. אם אתה הורה או אפוטרופוס וגילית שילדך סיפק לנו מידע אישי, אנא צור איתנו קשר כדי שנוכל למחוק את המידע.",
+                thirdPartyTitle: "7. שירותים של צדדים שלישיים",
+                thirdPartyText: "האפליקציה \"חיוב\" אינה משתמשת בשירותים של צדדים שלישיים, טרקרים, מפרסומות או כלי אנליטיקה. כל המידע נשאר במכשיר שלך בלבד.",
+                changesTitle: "8. שינויים במדיניות הפרטיות",
+                changesText1: "אנו עשויים לעדכן את מדיניות הפרטיות מעת לעת. כל שינוי משמעותי יפורסם בעמוד זה עם תאריך העדכון.",
+                changesText2: "מומלץ לבדוק את מדיניות הפרטיות באופן תקופתי כדי להישאר מעודכן על האופן שבו אנו מגנים על המידע שלך.",
+                contactTitle: "9. צור קשר",
+                contactText: "אם יש לך שאלות או חששות בנוגע למדיניות הפרטיות שלנו או לניהול המידע האישי שלך, אנא צור איתנו קשר:",
+                contactLabel: "יצירת קשר:",
+                contactFacebook: "צור קשר דרך פייסבוק",
+                consentTitle: "10. הסכמה",
+                consentText: "על ידי שימוש באפליקציה \"חיוב\", אתה מסכים למדיניות הפרטיות זו. אם אינך מסכים למדיניות זו, אנא אל תשתמש באפליקציה.",
+                footerText: "© 2025 חיוב - Chiyuv. כל הזכויות שמורות."
+            },
+            en: {
+                title: "Privacy Policy",
+                subtitle: "מדיניות פרטיות",
+                lastUpdated: "Last Updated: December 26, 2025 | עודכן לאחרונה: 26 בדצמבר 2025",
+                introTitle: "1. Introduction",
+                introText1: "The \"Chiyuv\" app respects your privacy and is committed to protecting your personal information. This privacy policy explains what information is collected, how it is used and stored, and what your rights are regarding this information.",
+                introText2: "By using the app, you agree to the collection and use of information in accordance with this policy.",
+                collectTitle: "2. Information We Collect",
+                collectText: "The \"Chiyuv\" app collects and stores the following information, which is stored locally on your device only:",
+                collectItem1: "<strong>Death Date:</strong> The Hebrew date of the parent's passing",
+                collectItem2: "<strong>Family Relationship:</strong> Whether it's a father or mother",
+                collectItem3: "<strong>Location:</strong> Choice between Israel or abroad",
+                collectItem4: "<strong>Chazan Preference:</strong> Whether standing as Chazan or only reciting Kaddish",
+                collectNote: "<strong>Important:</strong> All information is stored locally on your device only and is not sent to external servers or third-party service providers.",
+                useTitle: "3. How We Use Information",
+                useText: "The information collected is used solely for the following purposes:",
+                useItem1: "Calculating the obligation period (11 months)",
+                useItem2: "Calculating the required number of Kaddish prayers for each day",
+                useItem3: "Displaying information about day types (Shabbat, holidays, fast days, etc.)",
+                useItem4: "Providing statistics and progress for the obligation period",
+                useText2: "The app does not share your information with third parties and does not use it for advertising or marketing purposes.",
+                storageTitle: "4. Data Storage",
+                storageText1: "All information is stored locally on your device using iOS UserDefaults. The information remains on your device and is not stored in the cloud.",
+                storageText2: "If you delete the app from your device, all stored information will also be deleted. We cannot recover the information after deletion.",
+                storageText3: "We recommend that you keep a backup of important information independently.",
+                securityTitle: "5. Data Security",
+                securityText1: "We use the built-in security features of the iOS system to store information. The information is stored locally only and does not go through a network.",
+                securityText2: "However, please note that if your device is not protected (no password or Face ID), anyone who accesses the device will be able to see the information stored in the app.",
+                childrenTitle: "6. Children's Privacy",
+                childrenText: "The app is not intended for children under the age of 13 and we do not knowingly collect information from children under this age. If you are a parent or guardian and discover that your child has provided us with personal information, please contact us so we can delete the information.",
+                thirdPartyTitle: "7. Third-Party Services",
+                thirdPartyText: "The \"Chiyuv\" app does not use third-party services, trackers, advertisements, or analytics tools. All information remains on your device only.",
+                changesTitle: "8. Changes to Privacy Policy",
+                changesText1: "We may update the privacy policy from time to time. Any significant changes will be posted on this page with the update date.",
+                changesText2: "It is recommended to periodically check the privacy policy to stay updated on how we protect your information.",
+                contactTitle: "9. Contact Us",
+                contactText: "If you have questions or concerns regarding our privacy policy or the management of your personal information, please contact us:",
+                contactLabel: "Contact:",
+                contactFacebook: "Contact us on Facebook",
+                consentTitle: "10. Consent",
+                consentText: "By using the \"Chiyuv\" app, you agree to this privacy policy. If you do not agree to this policy, please do not use the app.",
+                footerText: "© 2025 Chiyuv. All rights reserved."
+            }
+        };
+
+        // Language management
+        function setLanguage(lang) {
+            // Update HTML direction and lang
+            document.documentElement.lang = lang;
+            document.body.dir = lang === 'he' ? 'rtl' : 'ltr';
+            
+            // Update language buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // Update all text elements
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    element.innerHTML = translations[lang][key];
+                }
+            });
+            
+            // Save preference
+            localStorage.setItem('preferredLanguage', lang);
+        }
+
+        // Load saved language preference
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferredLanguage') || 'he';
+            const langBtn = savedLang === 'he' 
+                ? document.querySelector('.lang-btn:first-child')
+                : document.querySelector('.lang-btn:last-child');
+            if (langBtn) {
+                langBtn.click();
+            }
+        });
+    </script>
+</body>
+</html>
