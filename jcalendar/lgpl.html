@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Open source &amp; LGPL - JCalendar</title>
-<meta name="description" content="LGPL notice, source code offer and relinking instructions for JCalendar's iOS app.">
+<meta name="description" content="LGPL notice, source code offer and relinking instructions for JCalendar on iOS and Android.">
 <link rel="alternate" hreflang="he" href="he/lgpl.html">
 <link rel="icon" href="assets/favicon.png">
 <meta name="theme-color" content="#141c52">
@@ -22,7 +22,7 @@
     <a class="lang" href="he/lgpl.html" lang="he">עברית</a>
   </nav>
   </div>
-  <p class="updated">Last updated: 9 November 2026 &middot; applies to JCalendar for iOS, version 2.0</p>
+  <p class="updated">Last updated: 9 November 2026 &middot; JCalendar for iOS (version 2.0) and Android</p>
   <h1>Open source &amp; LGPL</h1>
   <p class="lead">JCalendar uses a library that is licensed under the GNU Lesser General Public License, version 2.1 (LGPL-2.1). This page gives the notices, where to get the source code, and how to replace the library with your own build.</p>
 </div>
@@ -30,7 +30,7 @@
 
 <main class="wrap">
 
-<h2>The LGPL library</h2>
+<h2>JCalendar for iOS</h2>
 <div class="card">
   <h3>KosherSwift 1.10.8</h3>
   <dl>
@@ -48,7 +48,7 @@
 </div>
 <p>The original Java library, KosherJava Zmanim, is at <a href="https://github.com/KosherJava/zmanim">github.com/KosherJava/zmanim</a>.</p>
 
-<h2>How the app complies</h2>
+<h2>How the iOS app complies</h2>
 <p>KosherSwift is built as its own dynamic framework, <code>KosherSwift.framework</code>, and is embedded in the app at <code>JCalendar.app/Frameworks/</code>. It is not statically linked into the app. This lets you replace it with a modified version, as the LGPL requires.</p>
 
 <h2>Get the source code of the app</h2>
@@ -58,7 +58,7 @@
   <p>Subject: <em>JCalendar source code request</em>. We send the source (the Xcode project configuration, the vendored library and the app code that calls it) within a reasonable time, for the cost of a copy or free of charge. This offer is valid for at least three years from the date of the release that includes the library.</p>
 </div>
 
-<h2>Replace the library with your own build</h2>
+<h2>Replace KosherSwift with your own build (iOS)</h2>
 <p>With the source code from the request above:</p>
 <ol class="steps">
   <li>Edit the library sources in <code>iosApp/ThirdParty/KosherSwift/Sources/KosherSwift</code>, or replace that folder with your own fork. Keep the module name <code>KosherSwift</code> and the public API that the app calls.</li>
@@ -71,6 +71,24 @@ xcodebuild -project iosApp.xcodeproj -scheme iosApp \
   </li>
   <li>To avoid rebuilding the whole app, build only the <code>KosherSwift</code> framework target and copy the result over <code>iosApp.app/Frameworks/KosherSwift.framework</code>, then sign the app with your own identity. An app installed on a physical device must be signed.</li>
 </ol>
+
+<h2>JCalendar for Android</h2>
+<div class="card">
+  <h3>KosherJava Zmanim 2.5.0</h3>
+  <dl>
+    <dt>What it does</dt>
+    <dd>The Java library that the Android app uses for holidays, parsha, Daf Yomi and zmanim.</dd>
+    <dt>License</dt>
+    <dd>GNU Lesser General Public License 2.1 (&ldquo;version 2.1 or any later version&rdquo; in the source headers). Full text: <a href="https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html">gnu.org</a>, and inside the app under About.</dd>
+    <dt>Copyright</dt>
+    <dd>Copyright &copy; 2004&ndash;2022 Eliyahu Hershfeld.</dd>
+    <dt>Source code</dt>
+    <dd><a href="https://github.com/KosherJava/zmanim">github.com/KosherJava/zmanim</a>, tag <code>2.5.0</code>. The binary and its sources jar are on Maven Central: <a href="https://repo1.maven.org/maven2/com/kosherjava/zmanim/2.5.0/">repo1.maven.org/maven2/com/kosherjava/zmanim/2.5.0/</a>.</dd>
+    <dt>Our changes</dt>
+    <dd>None. The app uses the jar published on Maven Central, unmodified.</dd>
+  </dl>
+</div>
+<p>The library is a separate dependency (<code>com.kosherjava:zmanim:2.5.0</code>) and is not merged into the app's own code. To use a modified version, build the library yourself, point the app's dependency at your build, and rebuild the app. The app source code for this is available on request, as described above.</p>
 
 <h2>Other open source components</h2>
 <p>The full list, with license texts, is in the app under Settings &rarr; About.</p>

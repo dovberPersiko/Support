@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>קוד פתוח ו־LGPL - לחיות עם הזמן</title>
-<meta name="description" content="הודעת LGPL, הצעה לקבלת קוד המקור והוראות החלפת הספרייה באפליקציית ה־iOS.">
+<meta name="description" content="הודעת LGPL, הצעה לקבלת קוד המקור והוראות החלפת הספרייה באפליקציות ל־iOS ולאנדרואיד.">
 <link rel="alternate" hreflang="en" href="../lgpl.html">
 <link rel="icon" href="../assets/favicon.png">
 <meta name="theme-color" content="#141c52">
@@ -22,7 +22,7 @@
     <a class="lang" href="../lgpl.html" lang="en">English</a>
   </nav>
   </div>
-  <p class="updated">עודכן לאחרונה: 9 בנובמבר 2026 · חל על האפליקציה ל־iOS, גרסה 2.0</p>
+  <p class="updated">עודכן לאחרונה: 9 בנובמבר 2026 · חל על האפליקציה ל־iOS (גרסה 2.0) ולאנדרואיד</p>
   <h1>קוד פתוח ו־LGPL</h1>
   <p class="lead">האפליקציה משתמשת בספרייה שמורשית ברישיון GNU Lesser General Public License גרסה 2.1 (LGPL-2.1). בעמוד הזה: ההודעות הנדרשות, איפה מקבלים את קוד המקור, ואיך מחליפים את הספרייה בגרסה משלכם.</p>
 </div>
@@ -30,7 +30,7 @@
 
 <main class="wrap">
 
-<h2>הספרייה שברישיון LGPL</h2>
+<h2>לחיות עם הזמן ב־iOS</h2>
 <div class="card">
   <h3>KosherSwift 1.10.8</h3>
   <dl>
@@ -48,7 +48,7 @@
 </div>
 <p>הספרייה המקורית בג׳אווה, KosherJava Zmanim, נמצאת ב-<a href="https://github.com/KosherJava/zmanim"><bdi>github.com/KosherJava/zmanim</bdi></a>.</p>
 
-<h2>איך האפליקציה עומדת בדרישות</h2>
+<h2>איך אפליקציית ה־iOS עומדת בדרישות</h2>
 <p>KosherSwift נבנית כ־framework דינמי נפרד, <bdi><code>KosherSwift.framework</code></bdi>, ומוטמעת באפליקציה בתיקייה <bdi><code>Frameworks/</code></bdi>. היא אינה מקושרת סטטית לאפליקציה. כך אפשר להחליף אותה בגרסה ששונתה, כנדרש ב־LGPL.</p>
 
 <h2>קבלת קוד המקור של האפליקציה</h2>
@@ -58,7 +58,7 @@
   <p>נושא: <bdi><em>JCalendar source code request</em></bdi>. נשלח את קוד המקור (הגדרות פרויקט Xcode, הספרייה והקוד באפליקציה שקורא לה) תוך זמן סביר, בעלות של העתקה או ללא תשלום. ההצעה תקפה לפחות שלוש שנים מתאריך הגרסה שכוללת את הספרייה.</p>
 </div>
 
-<h2>החלפת הספרייה בגרסה משלכם</h2>
+<h2>החלפת KosherSwift בגרסה משלכם (iOS)</h2>
 <p>עם קוד המקור מהבקשה שלמעלה:</p>
 <ol class="steps">
   <li>ערכו את קוד הספרייה ב-<bdi><code>iosApp/ThirdParty/KosherSwift/Sources/KosherSwift</code></bdi>, או החליפו את התיקייה ב־fork משלכם. שמרו על שם המודול <bdi><code>KosherSwift</code></bdi> ועל ה־API הציבורי שהאפליקציה קוראת לו.</li>
@@ -71,6 +71,24 @@ xcodebuild -project iosApp.xcodeproj -scheme iosApp \
   </li>
   <li>כדי לא לבנות את כל האפליקציה: בנו רק את יעד ה־framework <bdi><code>KosherSwift</code></bdi>, העתיקו את התוצאה על <bdi><code>iosApp.app/Frameworks/KosherSwift.framework</code></bdi> וחתמו את האפליקציה בזהות שלכם. אפליקציה שמותקנת על מכשיר פיזי חייבת להיות חתומה.</li>
 </ol>
+
+<h2>לחיות עם הזמן באנדרואיד</h2>
+<div class="card">
+  <h3>KosherJava Zmanim 2.5.0</h3>
+  <dl>
+    <dt>מה היא עושה</dt>
+    <dd>ספריית ה־Java שאפליקציית האנדרואיד משתמשת בה לחגים, פרשת השבוע, דף יומי וזמני היום.</dd>
+    <dt>רישיון</dt>
+    <dd>GNU Lesser General Public License 2.1 (&quot;גרסה 2.1 או כל גרסה מאוחרת יותר&quot; בכותרות קובצי המקור). הטקסט המלא: <a href="https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html">gnu.org</a>, וגם באפליקציה תחת אודות.</dd>
+    <dt>זכויות יוצרים</dt>
+    <dd>Copyright &copy; 2004&ndash;2022 Eliyahu Hershfeld.</dd>
+    <dt>קוד המקור</dt>
+    <dd><a href="https://github.com/KosherJava/zmanim"><bdi>github.com/KosherJava/zmanim</bdi></a>, תג <bdi><code>2.5.0</code></bdi>. הקובץ הבינארי וקובץ המקור נמצאים ב־Maven Central: <a href="https://repo1.maven.org/maven2/com/kosherjava/zmanim/2.5.0/"><bdi>repo1.maven.org/maven2/com/kosherjava/zmanim/2.5.0/</bdi></a>.</dd>
+    <dt>שינויים שלנו</dt>
+    <dd>אין. האפליקציה משתמשת בקובץ ה־jar שפורסם ב־Maven Central, ללא שינוי.</dd>
+  </dl>
+</div>
+<p>הספרייה היא תלות נפרדת (<bdi><code>com.kosherjava:zmanim:2.5.0</code></bdi>) ואינה מוזגת לקוד של האפליקציה עצמה. כדי להשתמש בגרסה ששונתה, בנו את הספרייה בעצמכם, כוונו את התלות של האפליקציה לבנייה שלכם ובנו מחדש את האפליקציה. קוד המקור של האפליקציה לצורך כך זמין לפי בקשה, כמתואר למעלה.</p>
 
 <h2>רכיבי קוד פתוח נוספים</h2>
 <p>הרשימה המלאה, עם טקסטי הרישיונות, נמצאת באפליקציה תחת הגדרות &larr; אודות.</p>
