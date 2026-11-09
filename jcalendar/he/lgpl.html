@@ -3,34 +3,39 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>קוד פתוח ו-LGPL - לחיות עם הזמן</title>
-<meta name="description" content="הודעת LGPL, הצעה לקבלת קוד המקור והוראות החלפת הספרייה באפליקציית ה-iOS.">
+<title>קוד פתוח ו־LGPL - לחיות עם הזמן</title>
+<meta name="description" content="הודעת LGPL, הצעה לקבלת קוד המקור והוראות החלפת הספרייה באפליקציית ה־iOS.">
 <link rel="alternate" hreflang="en" href="../lgpl.html">
+<link rel="icon" href="../assets/favicon.png">
+<meta name="theme-color" content="#141c52">
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+<div class="hero compact">
 <div class="wrap">
-<header class="site">
-  <a class="brand" href="./">לחיות עם הזמן</a>
-  <nav>
+  <div class="topbar">
+    <a class="brand" href="./"><img src="../assets/favicon.png" alt="" width="30" height="30">לחיות עם הזמן</a>
+    <nav aria-label="ראשי">
     <a href="./">בית ותמיכה</a>
     <a href="privacy.html">פרטיות</a>
-    <a href="lgpl.html" aria-current="page">קוד פתוח ו-LGPL</a>
-    <a href="../lgpl.html" lang="en">English</a>
+    <a href="lgpl.html" aria-current="page">קוד פתוח ו־LGPL</a>
+    <a class="lang" href="../lgpl.html" lang="en">English</a>
   </nav>
-</header>
+  </div>
+  <p class="updated">עודכן לאחרונה: 9 בנובמבר 2026 · חל על האפליקציה ל־iOS, גרסה 2.0</p>
+  <h1>קוד פתוח ו־LGPL</h1>
+  <p class="lead">האפליקציה משתמשת בספרייה שמורשית ברישיון GNU Lesser General Public License גרסה 2.1 (LGPL-2.1). בעמוד הזה: ההודעות הנדרשות, איפה מקבלים את קוד המקור, ואיך מחליפים את הספרייה בגרסה משלכם.</p>
+</div>
+</div>
 
-<main>
-<h1>קוד פתוח ו-LGPL</h1>
-<p class="updated">עודכן לאחרונה: 9 בנובמבר 2026 · חל על האפליקציה ל-iOS, גרסה 2.0</p>
-<p class="lead">האפליקציה משתמשת בספרייה שמורשית ברישיון GNU Lesser General Public License גרסה 2.1 (LGPL-2.1). בעמוד הזה: ההודעות הנדרשות, איפה מקבלים את קוד המקור, ואיך מחליפים את הספרייה בגרסה משלכם.</p>
+<main class="wrap">
 
 <h2>הספרייה שברישיון LGPL</h2>
 <div class="card">
   <h3>KosherSwift 1.10.8</h3>
   <dl>
     <dt>מה היא עושה</dt>
-    <dd>פורט ל-Swift של KosherJava Zmanim. האפליקציה משתמשת בה לחגים, פרשת השבוע, דף יומי וזמני היום.</dd>
+    <dd>פורט ל־Swift של KosherJava Zmanim. האפליקציה משתמשת בה לחגים, פרשת השבוע, דף יומי וזמני היום.</dd>
     <dt>רישיון</dt>
     <dd>GNU Lesser General Public License 2.1. הטקסט המלא: <a href="https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html">gnu.org</a>, וגם באפליקציה תחת הגדרות &larr; אודות.</dd>
     <dt>זכויות יוצרים</dt>
@@ -44,10 +49,10 @@
 <p>הספרייה המקורית בג׳אווה, KosherJava Zmanim, נמצאת ב-<a href="https://github.com/KosherJava/zmanim"><bdi>github.com/KosherJava/zmanim</bdi></a>.</p>
 
 <h2>איך האפליקציה עומדת בדרישות</h2>
-<p>KosherSwift נבנית כ-framework דינמי נפרד, <bdi><code>KosherSwift.framework</code></bdi>, ומוטמעת באפליקציה בתיקייה <bdi><code>Frameworks/</code></bdi>. היא אינה מקושרת סטטית לאפליקציה. כך אפשר להחליף אותה בגרסה ששונתה, כנדרש ב-LGPL.</p>
+<p>KosherSwift נבנית כ־framework דינמי נפרד, <bdi><code>KosherSwift.framework</code></bdi>, ומוטמעת באפליקציה בתיקייה <bdi><code>Frameworks/</code></bdi>. היא אינה מקושרת סטטית לאפליקציה. כך אפשר להחליף אותה בגרסה ששונתה, כנדרש ב־LGPL.</p>
 
 <h2>קבלת קוד המקור של האפליקציה</h2>
-<p>קוד המקור של האפליקציה עצמה אינו מפורסם באינטרנט. בהתאם לסעיף 6 ב-LGPL-2.1, אנו מציעים לכל מי שיש בידו עותק של האפליקציה לקבל את קוד המקור שלה ואת קובצי הבנייה הדרושים לבנייה מחדש עם גרסה ששונתה של הספרייה. הבקשה בדוא״ל:</p>
+<p>קוד המקור של האפליקציה עצמה אינו מפורסם באינטרנט. בהתאם לסעיף 6 ב־LGPL-2.1, אנו מציעים לכל מי שיש בידו עותק של האפליקציה לקבל את קוד המקור שלה ואת קובצי הבנייה הדרושים לבנייה מחדש עם גרסה ששונתה של הספרייה. הבקשה בדוא״ל:</p>
 <div class="card">
   <p><a href="mailto:dober.p@gmail.com?subject=JCalendar%20source%20code%20request"><bdi>dober.p@gmail.com</bdi></a></p>
   <p>נושא: <bdi><em>JCalendar source code request</em></bdi>. נשלח את קוד המקור (הגדרות פרויקט Xcode, הספרייה והקוד באפליקציה שקורא לה) תוך זמן סביר, בעלות של העתקה או ללא תשלום. ההצעה תקפה לפחות שלוש שנים מתאריך הגרסה שכוללת את הספרייה.</p>
@@ -55,8 +60,8 @@
 
 <h2>החלפת הספרייה בגרסה משלכם</h2>
 <p>עם קוד המקור מהבקשה שלמעלה:</p>
-<ol>
-  <li>ערכו את קוד הספרייה ב-<bdi><code>iosApp/ThirdParty/KosherSwift/Sources/KosherSwift</code></bdi>, או החליפו את התיקייה ב-fork משלכם. שמרו על שם המודול <bdi><code>KosherSwift</code></bdi> ועל ה-API הציבורי שהאפליקציה קוראת לו.</li>
+<ol class="steps">
+  <li>ערכו את קוד הספרייה ב-<bdi><code>iosApp/ThirdParty/KosherSwift/Sources/KosherSwift</code></bdi>, או החליפו את התיקייה ב־fork משלכם. שמרו על שם המודול <bdi><code>KosherSwift</code></bdi> ועל ה־API הציבורי שהאפליקציה קוראת לו.</li>
   <li>צרו את הפרויקט ובנו:
 <pre><code>cd iosApp
 xcodegen generate
@@ -64,7 +69,7 @@ xcodebuild -project iosApp.xcodeproj -scheme iosApp \
   -configuration Debug \
   -destination 'platform=iOS Simulator,name=iPhone 17' build</code></pre>
   </li>
-  <li>כדי לא לבנות את כל האפליקציה: בנו רק את יעד ה-framework <bdi><code>KosherSwift</code></bdi>, העתיקו את התוצאה על <bdi><code>iosApp.app/Frameworks/KosherSwift.framework</code></bdi> וחתמו את האפליקציה בזהות שלכם. אפליקציה שמותקנת על מכשיר פיזי חייבת להיות חתומה.</li>
+  <li>כדי לא לבנות את כל האפליקציה: בנו רק את יעד ה־framework <bdi><code>KosherSwift</code></bdi>, העתיקו את התוצאה על <bdi><code>iosApp.app/Frameworks/KosherSwift.framework</code></bdi> וחתמו את האפליקציה בזהות שלכם. אפליקציה שמותקנת על מכשיר פיזי חייבת להיות חתומה.</li>
 </ol>
 
 <h2>רכיבי קוד פתוח נוספים</h2>
@@ -81,8 +86,7 @@ xcodebuild -project iosApp.xcodeproj -scheme iosApp \
 
 <footer class="site">
   <span>&copy; 2026 לחיות עם הזמן</span>
-  <span><a href="privacy.html">פרטיות</a> &middot; <a href="lgpl.html">קוד פתוח ו-LGPL</a></span>
+  <span><a href="privacy.html">פרטיות</a> &middot; <a href="lgpl.html">קוד פתוח ו־LGPL</a></span>
 </footer>
-</div>
 </body>
 </html>

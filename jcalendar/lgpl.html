@@ -6,24 +6,29 @@
 <title>Open source &amp; LGPL - JCalendar</title>
 <meta name="description" content="LGPL notice, source code offer and relinking instructions for JCalendar's iOS app.">
 <link rel="alternate" hreflang="he" href="he/lgpl.html">
+<link rel="icon" href="assets/favicon.png">
+<meta name="theme-color" content="#141c52">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="hero compact">
 <div class="wrap">
-<header class="site">
-  <a class="brand" href="./">JCalendar</a>
-  <nav>
+  <div class="topbar">
+    <a class="brand" href="./"><img src="assets/favicon.png" alt="" width="30" height="30">JCalendar</a>
+    <nav aria-label="Main">
     <a href="./">Home &amp; support</a>
     <a href="privacy.html">Privacy</a>
     <a href="lgpl.html" aria-current="page">Open source &amp; LGPL</a>
-    <a href="he/lgpl.html" lang="he">עברית</a>
+    <a class="lang" href="he/lgpl.html" lang="he">עברית</a>
   </nav>
-</header>
+  </div>
+  <p class="updated">Last updated: 9 November 2026 &middot; applies to JCalendar for iOS, version 2.0</p>
+  <h1>Open source &amp; LGPL</h1>
+  <p class="lead">JCalendar uses a library that is licensed under the GNU Lesser General Public License, version 2.1 (LGPL-2.1). This page gives the notices, where to get the source code, and how to replace the library with your own build.</p>
+</div>
+</div>
 
-<main>
-<h1>Open source &amp; LGPL</h1>
-<p class="updated">Last updated: 9 November 2026 &middot; applies to JCalendar for iOS, version 2.0</p>
-<p class="lead">JCalendar uses a library that is licensed under the GNU Lesser General Public License, version 2.1 (LGPL-2.1). This page gives the notices, where to get the source code, and how to replace the library with your own build.</p>
+<main class="wrap">
 
 <h2>The LGPL library</h2>
 <div class="card">
@@ -55,7 +60,7 @@
 
 <h2>Replace the library with your own build</h2>
 <p>With the source code from the request above:</p>
-<ol>
+<ol class="steps">
   <li>Edit the library sources in <code>iosApp/ThirdParty/KosherSwift/Sources/KosherSwift</code>, or replace that folder with your own fork. Keep the module name <code>KosherSwift</code> and the public API that the app calls.</li>
   <li>Generate the project and build:
 <pre><code>cd iosApp
@@ -83,6 +88,5 @@ xcodebuild -project iosApp.xcodeproj -scheme iosApp \
   <span>&copy; 2026 JCalendar</span>
   <span><a href="privacy.html">Privacy</a> &middot; <a href="lgpl.html">Open source &amp; LGPL</a></span>
 </footer>
-</div>
 </body>
 </html>
